@@ -8,6 +8,7 @@ dependencies:
   - mkl-devel
   - cython
   - scikit-learn
+  - scikit-image
   - jupyter
   - matplotlib
   - h5py

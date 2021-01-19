@@ -26,3 +26,6 @@ trefide.egg*
 profiling/*/
 NIPS/
 .idea
+.DS_Store
+.DS_Store
+funimag/.DS_Store
