@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsm6 \
     libxext6 \
     libxrender-dev \
+    libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Miniconda
@@ -21,7 +22,7 @@ ENV PATH /opt/conda/bin:$PATH
 ENV CONDA_PREFIX=/opt/conda
 ENV PATH=$CONDA_PREFIX/bin:$PATH
 
-RUN git -C ~/ clone https://github.com/erubel/trefide.git \
+RUN git -C ~/ clone https://github.com/evanrubel/trefide.git \
     && cd ~/trefide \
     && /opt/conda/bin/conda env update -n root -f environments/devel.yml \
     && /opt/conda/bin/conda clean -fya
