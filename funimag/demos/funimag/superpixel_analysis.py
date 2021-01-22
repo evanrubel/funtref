@@ -879,7 +879,21 @@ def update_AC_l2(U, V, normalize_factor, a, c, b, patch_size, corr_th_fix,
     """
     K = c.shape[1];
     res = np.zeros(maxiter);
+    # TODO: Many errors below with dimension/array mismatches
+
     uv_mean = (U*(V.mean(axis=0,keepdims=True))).sum(axis=1,keepdims=True);
+    # uv_mean = (U*(V.mean(axis=0))).sum(axis=1);
+    # uv_mean = (U*V).mean(axis=1)
+    # uv_mean = (U * (V.T.mean(axis=0, keepdims=True))).sum(axis=1, keepdims=True);
+    # print('U', U)
+    # print('V', V)
+    # print('V mean', V.mean(axis=0,keepdims=True))
+    # print('U * V mean', U*(V.mean(axis=0,keepdims=True)))
+    # print('U * V mean sum', uv_mean)
+
+    # print('Number of elements along axis 0', np.size(U*(V.mean(axis=0,keepdims=True))), 0)
+    # print('Number of elements along axis 1', np.size(U*(V.mean(axis=0,keepdims=True))), 1)
+    # print('Number of elements along axis 2', np.size(U*(V.mean(axis=0,keepdims=True))), 2)
 
     ## initialize spatial support ##
     mask_a = (a>0)*1;
