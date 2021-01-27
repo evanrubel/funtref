@@ -1,4 +1,4 @@
-name: trefide_deploy
+name: funtref_deploy
 channels:
   - defaults
   - intel

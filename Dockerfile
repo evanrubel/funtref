@@ -22,7 +22,7 @@ ENV PATH /opt/conda/bin:$PATH
 ENV CONDA_PREFIX=/opt/conda
 ENV PATH=$CONDA_PREFIX/bin:$PATH
 
-RUN git -C ~/ clone https://github.com/evanrubel/trefide.git \
+RUN git -C ~/ clone https://github.com/evanrubel/funtref.git \
     && cd ~/trefide \
     && /opt/conda/bin/conda env update -n root -f environments/devel.yml \
     && /opt/conda/bin/conda clean -fya

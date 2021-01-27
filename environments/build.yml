@@ -1,4 +1,4 @@
-name: trefide_build
+name: funtref_build
 channels:
   - defaults
   - intel
