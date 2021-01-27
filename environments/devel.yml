@@ -16,3 +16,4 @@ dependencies:
   - pip:
       - opencv-python
       - cvxpy
+      - Pillow
